@@ -1,12 +1,14 @@
 import React from 'react';
 import Gif from './Gif';
 
-const GifList = () => {
+const GifList = (props) => {
+  const { setSelectedGifID } = props;
+  const defaultGifIDs = ["WuGSL4LFUMQU", "u6uAu3yyDNqRq", "HuVCpmfKheI2Q"];
   return (
     <div className="gif-list">
-      <Gif gifID="WuGSL4LFUMQU" />
-      <Gif gifID="u6uAu3yyDNqRq" />
-      <Gif gifID="HuVCpmfKheI2Q" />
+      {
+        defaultGifIDs.map(gifID => <Gif gifID={gifID} key={gifId} />)
+      }
     </div>
   );
 };
