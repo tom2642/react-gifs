@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import Gif from './Gif';
+import GifList from './GifList';
 
 const App = () => {
   return (
@@ -8,11 +9,11 @@ const App = () => {
       <div className="left-scene">
         <SearchBar />
         <div className="selected-gif">
-          <Gif />
+          <Gif gifID="13HgwGsXF0aiGY" />
         </div>
       </div>
       <div className="right-scene">
-        <p>What</p>
+        <GifList />
       </div>
     </div>
   );
